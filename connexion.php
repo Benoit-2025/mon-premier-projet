@@ -1,11 +1,20 @@
 <?php 
 
     require_once "inc/init.php";
+
+       // RESTRICTION D'ACCES 
+       if(isConnected()) : 
+        header("location:profil.php");
+        exit;
+    endif;
+//
     // Gestion de la connexion
+
+    //
 
     if( isset($_POST['connect']) ){
         // Sécurisation des données
-        dataEspace();
+        dataEscape();
 
         //vérification des données
         if(empty($_POST['pseudo']) || empty($_POST['mdp']) ){
@@ -17,9 +26,11 @@
         debug($membre);
         debug($_POST);
         // if($membre['mdp'] == $_POST['mdp']){ // Ce n'est pas possible de vérifier le mdp ainsi, car le mdp en BDD est haché
-        if(password_verify($_POST["mdp"], $membre['mdp'])){
+        if(password_verify($_POST["mdp"], $membre['password'])){
 
             $_SESSION['membre'] = $membre;
+
+            $_SESSION['success']['connect'] = "Bravo vous êtes connecté";
 
             header('location:profil.php');
             exit;

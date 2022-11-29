@@ -12,7 +12,7 @@ try{
     $host = "localhost";
     $dbname = "mon_projet";
     $username = "root";
-    $password = "";
+    $password = ""; // sauf le Mac book qui prends le "root" les autres ordinateurs c'est sans .
     $option = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC

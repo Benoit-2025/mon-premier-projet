@@ -2,6 +2,12 @@
 
 <?php 
 
+      // RESTRICTION D'ACCES 
+      if(isConnected()) : 
+        header("location:profil.php");
+        exit;
+    endif;
+
       // Gestion de l'inscription
 
      if ( isset($_POST['subscribe']) ){
