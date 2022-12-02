@@ -10,6 +10,10 @@ if( !isConnected() ){
     exit;
 }
 
+$commandes = getCommandeByUser($_SESSION['membre']['id_membre']);
+debug($commandes);
+
+
 // debug($_SESSION);
 $title = "Profil";
 require_once RACINE_SITE . "inc/header.php";

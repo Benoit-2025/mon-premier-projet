@@ -23,14 +23,14 @@
 
     } else {
         $membre = getMembreByPseudo($_POST['pseudo']);
-        debug($membre);
-        debug($_POST);
+        //debug($membre);
+        //debug($_POST);
         // if($membre['mdp'] == $_POST['mdp']){ // Ce n'est pas possible de vérifier le mdp ainsi, car le mdp en BDD est haché
         if(password_verify($_POST["mdp"], $membre['password'])){
 
             $_SESSION['membre'] = $membre;
 
-            $_SESSION['success']['connect'] = "Bravo vous êtes connecté";
+            $_SESSION['success'] = "Bravo vous êtes connecté";
 
             header('location:profil.php');
             exit;

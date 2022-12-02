@@ -20,10 +20,10 @@
                                 Admin
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="admin/gestion_vehicules.php">Gestion Vehicules</a></li>
-                                <li><a class="dropdown-item" href="admin/gestion_membres.php">Gestion Membres</a></li>
-                                <li><a class="dropdown-item" href="admin/gestion_commandes.php">Gestion Commandes</a></li>
-                                <li><a class="dropdown-item" href="admin/gestion_agences.php">Gestion Agences</a></li>
+                                <li><a class="dropdown-item" href="<?= URL ?>admin/gestion_vehicules.php">Gestion Vehicules</a></li>
+                                <li><a class="dropdown-item" href="<?= URL ?>admin/gestion_membres.php">Gestion Membres</a></li>
+                                <li><a class="dropdown-item" href="<?= URL ?>admin/gestion_commandes.php">Gestion Commandes</a></li>
+                                <li><a class="dropdown-item" href="<?= URL ?>admin/gestion_agences.php">Gestion Agences</a></li>
                             </ul>
                         </li
                         <?php endif; ?>
